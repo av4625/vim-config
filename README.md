@@ -1,4 +1,4 @@
-# README #
+# Steps to setup vimrc #
 
 * mkdir .vim
 * cd .vim
