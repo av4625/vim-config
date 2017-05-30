@@ -79,6 +79,11 @@ Bundle 'kchmck/vim-coffee-script'
 filetype plugin indent on " Filetype auto-detection
 syntax on " Syntax highlighting
 
+" Press F2 before and after pasting to turn off auto indenting
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
