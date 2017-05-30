@@ -1,6 +1,6 @@
 # README #
 
-* Create a .vim folder
+* mkdir .vim
 * cd .vim
 * Pull
 * cd ..
