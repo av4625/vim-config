@@ -84,6 +84,7 @@ nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
+set backspace=indent,eol,start
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -92,6 +93,7 @@ set smarttab " let's tab key insert 'tab stops', and bksp deletes tabs.
 set shiftround " tab / shifting moves to closest tabstop.
 set autoindent " Match indents on new lines.
 set smartindent " Intellegently dedent / indent new lines based on rules.
+set number
 
 " We have VCS -- we don't need this stuff.
 set nobackup " We have vcs, we don't need backups.
