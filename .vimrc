@@ -168,6 +168,7 @@ let g:ctrlp_map = '<c-t>'
 " Let ctrlp have up to: 30 results.
 let g:ctrlp_max_height = 30
 
+set mouse=a
 
 " Finally the color scheme. Choose whichever you want from the list in the
 " link above (back up where we included the bundle of a ton of themes.)
