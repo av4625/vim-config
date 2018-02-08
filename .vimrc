@@ -173,3 +173,10 @@ set mouse=a
 " Finally the color scheme. Choose whichever you want from the list in the
 " link above (back up where we included the bundle of a ton of themes.)
 colorscheme blackboard
+
+set list listchars=tab:>-,trail:£
+ 
+" Switch easily between buffers
+noremap <C-n> :bn<CR>
+noremap <C-p> :bp<CR>
+nnoremap <F5> :buffers<CR>:buffer<Space>
