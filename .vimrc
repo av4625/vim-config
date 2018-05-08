@@ -182,7 +182,7 @@ set t_Co=256
 colorscheme blackboard
 
 set list listchars=tab:>-,trail:�
- 
+
 " Switch easily between buffers
 noremap <C-n> :bn<CR>
 noremap <C-p> :bp<CR>
