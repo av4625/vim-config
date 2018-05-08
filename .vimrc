@@ -172,16 +172,16 @@ set mouse=a
 set t_Co=256
 
 " Set block cursor when not in insert mode
-let &t_ti.="\e[1 q"
-let &t_SI.="\e[5 q"
-let &t_EI.="\e[1 q"
-let &t_te.="\e[0 q"
+" let &t_ti.="\e[1 q"
+" let &t_SI.="\e[5 q"
+" let &t_EI.="\e[1 q"
+" let &t_te.="\e[0 q"
 
 " Finally the color scheme. Choose whichever you want from the list in the
 " link above (back up where we included the bundle of a ton of themes.)
 colorscheme blackboard
 
-set list listchars=tab:>-,trail:£
+set list listchars=tab:>-,trail:ï¿½
  
 " Switch easily between buffers
 noremap <C-n> :bn<CR>
