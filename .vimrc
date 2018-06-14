@@ -181,7 +181,7 @@ let &t_te.="\e[0 q"
 " link above (back up where we included the bundle of a ton of themes.)
 colorscheme blackboard
 
-set list listchars=tab:>-,trail:£
+set list listchars=tab:>-,trail:ï¿½
 
 " Switch easily between buffers
 noremap <C-n> :bn<CR>
@@ -198,4 +198,3 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
-
