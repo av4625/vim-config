@@ -179,7 +179,7 @@ let &t_te.="\e[0 q"
 
 " Finally the color scheme. Choose whichever you want from the list in the
 " link above (back up where we included the bundle of a ton of themes.)
-colorscheme blackboard
+colorscheme onedark
 
 set list listchars=tab:>-,trail:£
 
