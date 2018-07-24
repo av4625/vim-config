@@ -181,7 +181,7 @@ let &t_te.="\e[0 q"
 " link above (back up where we included the bundle of a ton of themes.)
 colorscheme myonedark
 
-set list listchars=tab:>-,trail:£
+set list listchars=tab:>-,trail:ï¿½
 
 " Switch easily between buffers
 noremap <C-n> :bn<CR>
@@ -208,4 +208,5 @@ inoremap <A-l> <Esc>gt
 vnoremap <A-h> <Esc>gT
 vnoremap <A-l> <Esc>gt
 
+" Yank to and paste from computers clipboard
 set clipboard=unnamed,unnamedplus
