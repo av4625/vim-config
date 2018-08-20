@@ -25,6 +25,7 @@ call vundle#rc()
 " Let vundle manage itself:
 Bundle 'gmarik/vundle'
 
+" Atom one dark theme
 Bundle 'Daetalus/atom-one-dark'
 
 " Just a shitload of color schemes.
