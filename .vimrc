@@ -135,7 +135,7 @@ hi clear CursorLine
 let g:ctrlp_buffer_func = { 'enter': 'BrightHighlightOn', 'exit':  'BrightHighlightOff', }
 
 " Colour the wildmenu background
-hi WildMenu guifg=#93a1a1 guibg=#073642 gui=NONE
+" hi WildMenu guifg=#93a1a1 guibg=#073642 gui=NONE
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files and backups
