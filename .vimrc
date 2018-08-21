@@ -160,7 +160,7 @@ set smartindent " Intellegently dedent / indent new lines based on rules.
 set hidden " Allow me to have buffers with unsaved changes.
 
 " Show trainling spaces
-set list listchars=tab:>-,trail:£
+set list listchars=tab:>-,trail:ï¿½
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode
@@ -244,7 +244,7 @@ if has("unix")
     endif
 endif
 
-" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
+" Move a line of text using ALT+[jk]
 nnoremap <M-j> :m .+1<CR>==
 nnoremap <M-k> :m .-2<CR>==
 inoremap <M-j> <Esc>:m .+1<CR>==gi
