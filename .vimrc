@@ -160,7 +160,7 @@ set smartindent " Intellegently dedent / indent new lines based on rules.
 set hidden " Allow me to have buffers with unsaved changes.
 
 " Show trainling spaces
-set list listchars=tab:>-,trail:ï¿½
+set list listchars=tab:>-,trail:£
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode
