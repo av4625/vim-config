@@ -126,7 +126,7 @@ set t_Co=256 " Set 256 colours
 colorscheme myonedark
 
 " Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
+set encoding=utf-8
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
@@ -234,19 +234,27 @@ vnoremap <Up> gk
 " inoremap <Down> <C-o>gj    These break moving up and down in the ctrl-p menu
 " inoremap <Up> <C-o>gk
 
-" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
-" Not working
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
-vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+" Fixes Alt mappings mac
+" https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
 
-if has("mac") || has("macunix")
-  nmap <D-j> <M-j>
-  nmap <D-k> <M-k>
-  vmap <D-j> <M-j>
-  vmap <D-k> <M-k>
+if has("unix")
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        for i in range(97,122)
+            let c = nr2char(i)
+            exec "map \e".c." <M-".c.">"
+            exec "map! \e".c." <M-".c.">"
+        endfor
+    endif
 endif
+
+" Move a line of text using ALT+[jk]
+nnoremap <M-j> :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
+inoremap <M-j> <Esc>:m .+1<CR>==gi
+inoremap <M-k> <Esc>:m .-2<CR>==gi
+vnoremap <M-j> :m '>+1<CR>gv=gv
+vnoremap <M-k> :m '<-2<CR>gv=gv
 
 " Map the key for toggling comments with vim-commentary
 " Doesn't seem to work
