@@ -112,6 +112,10 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
+
+" Show 80 character line
+set colorcolumn=80
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colours and fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -194,7 +198,7 @@ set showtabline=2
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ cwd:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Mappings
@@ -245,7 +249,7 @@ if has("mac") || has("macunix")
 endif
 
 " Map the key for toggling comments with vim-commentary
-"" Doesn't seem to work
+" Doesn't seem to work
 nnoremap <leader>c <Plug>CommentaryLine
 
 " These are plugin settings or something
