@@ -95,6 +95,7 @@ let &t_te.="\e[0 q"
 
 set so=7 " Set 7 lines to the cursor when moving vertically
 set wildmenu " Pressing tab in command line works in enhanced way, must be compiled with +wildmenu
+set wildmode=longest,list,full " Complete longest common string, then list alternatives, then select the sortest first
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
@@ -114,7 +115,7 @@ set t_vb=
 set tm=500
 
 " Show 80 character line
-set colorcolumn=80
+set colorcolumn=81
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colours and fonts
@@ -164,7 +165,7 @@ set smartindent " Intellegently dedent / indent new lines based on rules.
 set hidden " Allow me to have buffers with unsaved changes.
 
 " Show trainling spaces
-set list listchars=tab:>-,trail:£
+set list listchars=tab:>-,trail:.
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode
@@ -275,8 +276,8 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 
 " Press F2 before and after pasting to turn off auto indenting
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
+nnoremap <leader>p :set invpaste paste?<CR>
+set pastetoggle=<leader>p
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Search
