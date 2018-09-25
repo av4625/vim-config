@@ -136,9 +136,6 @@ set ffs=unix,dos,mac
 set cursorline
 hi clear CursorLine
 
-" Colour the Ctrl-p background, Not working
-let g:ctrlp_buffer_func = { 'enter': 'BrightHighlightOn', 'exit':  'BrightHighlightOff', }
-
 " Colour the wildmenu background
 " hi WildMenu guifg=#93a1a1 guibg=#073642 gui=NONE
 
@@ -188,6 +185,27 @@ nnoremap <C-l> <C-w>l
 noremap <C-n> :bn<CR>
 noremap <C-p> :bp<CR>
 noremap <F5> :buffers<CR>:buffer<Space>
+
+" Go to tab by number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+" Ctrl left and right to change tabs
+if &term == "screen-256color"
+    map <esc>[1;5D <C-Left>
+    map <esc>[1;5C <C-Right>
+endif
+
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 
 " Always show tab bar
 set showtabline=2
@@ -314,14 +332,6 @@ function! HasPaste()
         return 'PASTE MODE  '
     en
     return ''
-endfunction
-
-function BrightHighlightOn()
-    hi CursorLine guibg=darkred
-endfunction
-
-function BrightHighlightOff()
-    hi CursorLine guibg=#191919
 endfunction
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
