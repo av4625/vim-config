@@ -181,11 +181,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Switch easily between buffers
-noremap <C-n> :bn<CR>
-noremap <C-p> :bp<CR>
-noremap <F5> :buffers<CR>:buffer<Space>
-
 " Go to tab by number
 noremap <leader>1 1gt
 noremap <leader>2 2gt
@@ -236,6 +231,12 @@ noremap <leader>v <C-w>v
 nnoremap / /\v
 vnoremap / /\v
 
+" Use relative line numbers when y and d are pressed
+nnoremap y :set relativenumber!<cr>y
+onoremap y y:set relativenumber!<cr>
+nnoremap d :set relativenumber!<cr>d
+onoremap d d:set relativenumber!<cr>
+
 " Clear match highlighting
 noremap <leader><space> :noh<cr>:call clearmatches()<cr>
 
@@ -253,7 +254,7 @@ vnoremap <Up> gk
 " inoremap <Down> <C-o>gj    These break moving up and down in the ctrl-p menu
 " inoremap <Up> <C-o>gk
 
-" Fixes Alt mappings mac
+" Fixes Alt mappings mac, if option is meta
 " https://vi.stackexchange.com/questions/2350/how-to-map-alt-key
 
 if has("unix")
@@ -277,17 +278,11 @@ vnoremap <M-k> :m '<-2<CR>gv=gv
 
 " Map the key for toggling comments with vim-commentary
 " Doesn't seem to work
-nnoremap <leader>c <Plug>CommentaryLine
 
 " These are plugin settings or something
 
-" Remap ctrlp to ctrl-t -- map it however you like, or stick with the
-" defaults. Additionally, in my OS, I remap caps lock to control. I never use
-" caps lock. This is highly recommended.
-" let g:ctrlp_map = '<c-t>'
-
 " Let ctrlp have up to: 30 results.
-let g:ctrlp_max_height = 10 " Doesn't seem to work
+let g:ctrlp_max_height = 30
 
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 autocmd BufWrite *.py :call DeleteTrailingWS()
